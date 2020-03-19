@@ -1,0 +1,19 @@
+select usuario, nombre from usuario
+inner join empleado 
+on usuario.idempleado = empleado.idempleado
+
+select email as correo
+from empleado
+inner join usuario
+on empleado.idempleado=usuario.idempleado 
+where activo = 1
+
+select count(autor) 
+from publicacion
+where autor = 'Eric G. Coronel Castillo'
+
+select sum(precio)
+from venta
+inner join empleado
+on venta.idempleado=empleado.idempleado 
+where nombre = 'EMILIO'
